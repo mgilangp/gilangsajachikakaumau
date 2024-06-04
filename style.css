@@ -1,29 +1,59 @@
 :root {
   --pink: #f14e95;
-  --gold: #937a54;
   --lightgold: #ffe2b8;
+  --gold: #937a54;
+  --greyy: #434343;
   --bg: rgba(0, 0, 0, 0.9);
-  --shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+  --shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 body {
   font-size: 1.2rem;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   min-height: 4000px;
 }
 
+/* Section Animasi */
+
+.animasi {
+  position: relative;
+  min-height: 100vh;
+}
+
+.animasi .controls .btn {
+  border: none !important;
+  background: none !important;
+}
+.animasi .btn {
+  color: white;
+}
+
+.animasi .btn:hover {
+  color: var(--pink) !important;
+}
+
+.animasi .row .btn {
+  color: white;
+}
+
+.animasi .row .btn:hover {
+  color: white;
+  text-shadow: var(--shadow);
+}
+
+/* Section Hero */
+
 .hero::before {
-  content: "asd";
+  content: "";
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   height: 100%;
-  background-color: whitesmoke;
+  /* background-color: #041c15; */
   background-size: cover;
-  background-position: center;
   z-index: -1;
-  filter: blur(0.7rem);
+  /* filter: blur(0.7rem); */
 }
 
 .hero {
@@ -32,18 +62,19 @@ body {
 }
 
 .hero .col-image {
-  margin: 0px;
-}
-
-* {
-  box-sizing: border-box;
+  position: relative;
+  width: 70%;
+  overflow: hidden;
 }
 
 /* Slideshow container */
 .hero .slideshow-container {
-  max-width: 1000px;
-  position: relative;
+  /* max-width: 1200px; */
+
   margin: auto;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* Hide the images by default */
@@ -121,60 +152,71 @@ body {
   background-color: #717171;
 }
 
-/* Fading animation
+/* Fading animation*/
 .hero .fade {
   animation-name: fade;
-  animation-duration: 10s;
+  animation-duration: 1.6s;
 }
 
 @keyframes fade {
   from {
-    opacity: 0.4;
+    opacity: 0.1;
   }
   to {
     opacity: 1;
   }
-} */
-
-.hero .col-text {
-  margin: auto;
 }
 
-.hero h2,
-.hero h4,
-.hero p {
+.hero .col-text {
+  position: relative;
+  width: 30%;
+  margin-top: auto;
+}
+
+.hero h2 {
+  font-family: "Allura", cursive;
+  font-size: 5rem;
+  color: var(--gold);
   text-shadow: var(--shadow);
 }
 
-.hero h1 {
-  font-family: "Sacramento", cursive;
-  font-size: 5rem;
+.hero h3 {
+  font-family: "Allura", cursive;
+  font-size: 3rem;
   color: var(--gold);
-  margin-top: 3rem;
+  text-shadow: var(--shadow);
+  margin-top: -2rem;
+  margin-bottom: -1.5rem;
 }
-.hero h2 {
-  font-family: "Sacramento", cursive;
-  font-size: 5rem;
-  color: var(--gold);
-  margin-top: 3rem;
+
+.hero h4,
+.hero p {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
 }
 
 .hero h4 {
-  font-size: 1.2rem;
-  margin-top: 3rem;
+  font-size: 1.3rem;
   color: var(--gold);
+  font-weight: bold;
+  letter-spacing: 0.05rem;
 }
 
 .hero p {
-  margin-top: 2rem;
   font-size: 1.2rem;
   color: var(--gold);
+}
+
+.hero .text-container {
+  margin-top: 5rem;
 }
 
 .hero .row .btn {
   color: var(--gold);
   background-color: white;
   box-shadow: var(--shadow);
+  margin: 1rem;
+  width: 30%;
 }
 
 .hero .row .btn:hover {
@@ -182,34 +224,17 @@ body {
   background-color: var(--gold);
 }
 
-.home {
-  background-image: url(/img/bg-home.avif);
-  background-size: cover;
-  min-height: 100vh;
-  margin-top: -6rem;
-  padding-top: 12rem;
-  padding-bottom: 15rem;
-}
-
-.home h2 {
-  font-family: "Sacramento", cursive;
-  color: var(--pink);
-  font-size: 5rem;
-}
-
-.home h3 {
-  font-family: "Work Sans", sans-serif;
-}
-
-.home p {
-  font-family: "Work Sans", sans-serif;
-}
+/* NavBar -------------------------------------- */
 
 .mynavbar {
   background-color: rgba(255, 255, 255, 0.5) !important;
   backdrop-filter: blur(5px);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin: 1px;
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+  text-align: end;
 }
 
 .mynavbar .offcanvas {
@@ -223,27 +248,51 @@ body {
   font-weight: bold;
 }
 
-.mynavbar .offcanvas-title {
-  align-self: center;
+/* home -------------------------------------- */
+
+/* Home Section */
+
+.home {
+  background-image: url(/img/bg-home.jpg);
+  background-size: cover;
+  background-position: top;
+  min-height: 100vh;
+  margin-top: 1%;
+  padding-top: 4rem;
+  padding-bottom: 15rem;
 }
 
-.mynavbar .nav-link {
-  text-transform: uppercase;
-  margin: 2px;
-}
-
-.mynavbar .navbar-body {
-  text-align: left;
-}
-
-.home .couple {
-  margin-top: 80px;
-}
-
-.home .couple h3 {
-  font-family: "Sacramento", cursive;
+.home h2 {
+  font-family: "Allura", cursive;
+  color: var(--gold);
   font-size: 3rem;
-  color: var(--pink);
+  line-height: 4rem;
+}
+
+.home h3 {
+  font-family: "Work Sans", sans-serif;
+}
+
+.home p {
+  font-family: "Work Sans", sans-serif;
+}
+.home .couple {
+  padding-top: 60px;
+}
+
+.home .couple text {
+}
+
+.home .couple h2 {
+  font-family: "Allura", cursive;
+  font-size: 5rem;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+.home .couple h3 {
+  font-family: "Work Sans", cursive;
+  font-size: 1.2rem;
+  color: var(--gold);
 }
 
 .home .couple p {
@@ -251,14 +300,26 @@ body {
 }
 
 .home .couple img {
-  width: 100%;
+  width: 60%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+}
+
+.home .couple .box {
+  width: 40%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
 }
 
 .home .heart {
   width: 50px;
   height: 50px;
   color: white;
-  background-color: var(--pink);
+  background-color: var(--gold);
   display: flex;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
@@ -314,9 +375,6 @@ body {
 
 /* Extra Large */
 @media (max-width: 1200px) {
-  .home .heart {
-    transform: translatex(-50%) translateY(75px);
-  }
 }
 
 /* Web */
@@ -338,24 +396,40 @@ body {
     font-size: 62.5%;
   }
 
+  .hero .col-image {
+    flex: none;
+    width: 100%;
+    overflow: hidden;
+  }
   .simply-countdown > .simply-section {
     padding: 60px;
     margin: 5px;
   }
+
   .mynavbar .nav-link {
     font-size: 2rem;
     text-align: center;
+  }
+
+  .sticky-top {
+    /* overflow: hidden; */
   }
 }
 
 /* Phone */
 @media (max-width: 576px) {
   html {
-    font-size: 70%;
-    min-height: 800%;
+    font-size: 100%;
+    min-height: 90%;
   }
+
   .simply-countdown > .simply-section {
     padding: 70px;
     margin: 5px;
+  }
+  .hero .col-text {
+    position: relative;
+    width: 100%;
+    margin-top: 15%;
   }
 }

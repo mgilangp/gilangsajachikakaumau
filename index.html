@@ -10,12 +10,40 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Video -->
+    <style>
+      body {
+        margin: 0;
+      } /* Remove body margin for full screen video */
+      video {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        width: 100%; /* Full width for all screen sizes */
+        height: 100vh; /* Full viewport height */
+      }
+    </style>
 
     <!-- simplyCountdown -->
     <link
@@ -34,59 +62,36 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section
-      id="hero"
-      class="hero w-100 h-100 p-3 mx-sm-0 my-auto text-center d-flex justify-content-center align-items-Start text-white"
-    >
-      <div class="container-fluid d-flex align-items-baseline">
-        <div class="row">
-          <div class="col-image col-lg-9">
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-              <!-- Full-width images with number and caption text -->
-              <div class="mySlides">
-                <!-- <div class="numbertext">1 / 4</div> -->
-                <img src="https://raw.githubusercontent.com/mgilangp/gilangsajachikakaumau/main/img/hero/5.jpg" style="width: 100%" />
-                <!-- <div class="text">Caption Text</div> -->
-              </div>
+    <section id="animasi" class="animasi bg-black">
+      <video id="myVideo" autoplay controls>
+        <source src="/img/CG.MP4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-              <div class="mySlides">
-                <!-- <div class="numbertext">2 / 4</div> -->
-                <img src="https://raw.githubusercontent.com/mgilangp/gilangsajachikakaumau/main/img/hero/6.jpg" style="width: 100%" />
-                <!-- <div class="text">Caption Two</div> -->
-              </div>
+      <script>
+        // Function to handle next section action (replace with your desired action)
+        const video = document.getElementById("myVideo"); // Replace with your video element ID
+        video.volume = 0.0; /* Set initial volume to 50% */
 
-              <div class="mySlides">
-                <!-- <div class="numbertext">3 / 4</div> -->
-                <img src="https://raw.githubusercontent.com/mgilangp/gilangsajachikakaumau/main/img/hero/7.jpg" style="width: 100%" />
-                <!-- <div class="text">Caption Three</div> -->
-              </div>
+        video.addEventListener("ended", function () {
+          const scrollTarget = document.getElementById("hero"); // Optional: Target section for scrolling (replace with ID)
 
-              <div class="mySlides">
-                <!-- <div class="numbertext">3 / 4</div> -->
-                <img src="https://raw.githubusercontent.com/mgilangp/gilangsajachikakaumau/main/img/hero/8.jpg" style="width: 100%" />
-                <!-- <div class="text">Caption Three</div> -->
-              </div>
-              <!-- Next and previous buttons -->
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-          </div>
-          <div class="col-text col-lg-3 p-5">
-            <h4>Hi, XXX!</h4>
-            <h2>Chika & Gilang</h2>
-            <p>are so excited to invite you to our Wedding</p>
-            <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()"
-              >Lihat Undangan</a
-            >
-          </div>
-        </div>
-      </div>
+          if (scrollTarget) {
+            scrollTarget.scrollIntoView({ behavior: "smooth" });
+          } else {
+            // Scroll to the bottom of the page if no target section provided
+            window.scrollTo({
+              top: document.documentElement.scrollHeight,
+              behavior: "smooth",
+            });
+          }
+        });
+      </script>
     </section>
 
-    <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
+    <!-- <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top mynavbar">
       <div class="container">
-        <a class="navbar-brand" href="#home">#GilangsajaChikakaumau</a>
+        <a class="navbar-brand" href="#">GilangsajaChikakaumau</a>
         <button
           class="navbar-toggler border-0"
           type="button"
@@ -105,7 +110,7 @@
         >
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              #GilangsajaChikakaumau
+              GilangsajaChikakaumau
             </h5>
             <button
               type="button"
@@ -117,76 +122,133 @@
           <div class="offcanvas-body">
             <div class="navbar-nav ms-auto">
               <a class="nav-link" href="#home">Home</a>
-              <a class="nav-link" href="#info">Invitation Detail</a>
-              <a class="nav-link" href="#story">Our Story</a>
-              <a class="nav-link" href="#gallery">Photo Album</a>
-              <a class="nav-link" href="#gift">Send Gifts</a>
+              <a class="nav-link" href="#couple">Getting to know us</a>
+              <a class="nav-link" href="#event">Event Detail</a>
+              <a class="nav-link" href="#rsvp">RSVP</a>
+              <a class="nav-link" href="#gift">Gift</a>
+              <a class="nav-link" href="#gallery">Gallery</a>
             </div>
           </div>
         </div>
       </div>
-    </nav>
+    </nav> -->
+
+    <section
+      id="hero"
+      class="hero w-100 p-3 mx-sm-0 my-auto d-flex justify-content-center"
+    >
+      <div class="container-fluid align-content-center">
+        <div class="row text-center justify-content-center">
+          <div class="col-image col-lg-9 p-0 align-content-center">
+            <!-- Slideshow container -->
+            <div class="slideshow-container p-0 my-0">
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides">
+                <!-- <div class="numbertext">1 / 4</div> -->
+                <img src="/img/hero/1.jpg" style="width: 100%" />
+                <!-- <div class="text">Caption Text</div> -->
+              </div>
+
+              <div class="mySlides">
+                <!-- <div class="numbertext">2 / 4</div> -->
+                <img src="/img/hero/2.jpg" style="width: 100%" />
+                <!-- <div class="text">Caption Two</div> -->
+              </div>
+
+              <div class="mySlides">
+                <!-- <div class="numbertext">3 / 4</div> -->
+                <img src="/img/hero/3.jpg" style="width: 100%" />
+                <!-- <div class="text">Caption Three</div> -->
+              </div>
+
+              <div class="mySlides">
+                <!-- <div class="numbertext">4 / 4</div> -->
+                <img src="/img/hero/4.jpg" style="width: 100%" />
+                <!-- <div class="text">Caption Three</div> -->
+              </div>
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+          </div>
+          <div
+            class="col-text col-lg-3 p-lg-1 align-content-center justify-content-center"
+          >
+            <h2>Chika</h2>
+            <br />
+            <h3>&</h3>
+            <br />
+            <h2>Gilang</h2>
+            <div class="text-container">
+              <p>are so excited to invite you,</p>
+              <h4>Guest Name</h4>
+              <p>to our Wedding</p>
+            </div>
+            <div class="container align-items-baseline">
+              <div
+                class="row dflex justify-content-center align-items-end p-lg-1"
+              >
+                <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()"
+                  >Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="home" class="home">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
-            <h2>Acara Pernikahan</h2>
-            <h3>diselenggarakan pada</h3>
-            <p>oleh karena itu</p>
+            <h2>The Bride and The Groom</h2>
           </div>
         </div>
-        <div class="row couple">
-          <div class="col-lg-6">
+        <div class="row couple align-content-center justify-content-center">
+          <div
+            class="col-lg-4 justify-content-center w-40 p-50 text-center mt-5"
+          >
             <div class="row">
-              <div class="col-8 text-end">
-                <h3>Muhammad Gilang Pratama</h3>
-                <p>
-                  Well known as G-CEO. Able to do anykind of
-                  <i><b>G-Services</b></i
-                  >, including but not limited to G-Ride, G-Food, G-Wash, and
-                  many things beyond any start up company can imagine
-                </p>
-                <p>
-                  Putra dari <br />
-                  Bapak Bambang Hery Wahyoe Soekarno <br />
-                  dan <br />
-                  Ibu Asriyati
-                </p>
-              </div>
-              <div class="col-4">
-                <img
-                  src="img/gilang.jpeg"
-                  alt="Muhammad Gilang Pratama"
-                  class="img-responsive rounded-circle"
-                />
-              </div>
+              <img
+                src="img/chika.jpeg"
+                alt="Chika Ratu Devina"
+                class="img-responsive rounded-circle"
+              />
+            </div>
+            <div class="row text">
+              <h2>Chika</h2>
+              <h3>Chika Ratu Devina</h3>
+              <p>
+                Putri Pertama dari <br />
+                Bapak Fitrus Ardoni <br />
+                dan <br />
+                Ibu Seny Herna Wanty
+              </p>
             </div>
           </div>
-          <span class="heart"><i>+</i></span>
-          <div class="col-lg-6">
+          <div
+            class="col-lg-2 justify-content-center text-center align-content-center"
+          >
+            <h2><br />&</h2>
+          </div>
+          <div class="col-lg-4 justify-content-center p-50 text-center mt-5">
             <div class="row">
-              <div class="col-4">
-                <img
-                  src="img/chika.jpeg"
-                  alt="Chika Ratu Devina"
-                  class="img-responsive rounded-circle"
-                />
-              </div>
-              <div class="col-8">
-                <h3>Chika Ratu Devina</h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit deleniti harum nostrum suscipit, minima nulla
-                  aliquam consequuntur iste quasi tempora expedita sequi
-                  corporis iusto ex amet ullam porro molestias magnam.
-                </p>
-                <p>
-                  Putra dari bpk lorem <br />
-                  dan <br />
-                  ibu ipsum
-                </p>
-              </div>
+              <img
+                src="img/gilang.jpeg"
+                alt="Muhammad Gilang Pratama"
+                class="img-responsive rounded-circle"
+              />
+            </div>
+            <div class="row text">
+              <h2>Gilang</h2>
+              <h3>Muhammad Gilang Pratama</h3>
+              <p>
+                Putra Pertama dari <br />
+                Bapak Bambang H W Soekarno <br />
+                dan <br />
+                Ibu Asriyati
+              </p>
             </div>
           </div>
         </div>
@@ -276,7 +338,7 @@
         inline: true, //set to true to get an inline basic countdown like : 24 days, 4 hours, 2 minutes, 5 seconds
       });
     </script>
-    <script>
+    <!-- <script>
       let slideIndex = 1;
       showSlides(slideIndex);
 
@@ -309,8 +371,8 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
       }
-    </script>
-    <!-- <script>
+    </script> -->
+    <script>
       let slideIndex = 0;
       showSlides();
 
@@ -325,8 +387,8 @@
           slideIndex = 1;
         }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 10000); // Change image every 2 seconds
+        setTimeout(showSlides, 1000); // Change image every 2 seconds
       }
-    </script> -->
+    </script>
   </body>
 </html>
