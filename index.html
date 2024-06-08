@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gilang saja Chika kau mau</title>
+    <title>#GilangsajaChikaKauMau</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,21 +15,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Great+Vibes&family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
+
+    <!-- 
+  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Playfair Display", serif;
+  font-family: "Marcellus", serif;
+  font-family: "Cinzel", serif;
+  font-family: "Great Vibes", cursive;
+    -->
 
     <!-- Video -->
     <style>
@@ -62,16 +59,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Section Animasi -->
     <section id="animasi" class="animasi bg-black">
-      <video id="myVideo" autoplay controls playsinline>
-        <source src="/gilangsajachikakaumau/img/CG.mp4" type="video/mp4" />
+      <video id="myVideo" autoplay controls>
+        <source src="/img/CG.MP4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       <script>
         // Function to handle next section action (replace with your desired action)
         const video = document.getElementById("myVideo"); // Replace with your video element ID
-        video.volume = 0.0; /* Set initial volume to 50% */
+        video.volume = 0.05; /* Set initial volume to 50% */
 
         video.addEventListener("ended", function () {
           const scrollTarget = document.getElementById("hero"); // Optional: Target section for scrolling (replace with ID)
@@ -133,6 +131,8 @@
       </div>
     </nav> -->
 
+    <!-- Section Hero -->
+
     <section
       id="hero"
       class="hero w-100 p-3 mx-sm-0 my-auto d-flex justify-content-center"
@@ -145,25 +145,25 @@
               <!-- Full-width images with number and caption text -->
               <div class="mySlides">
                 <!-- <div class="numbertext">1 / 4</div> -->
-                <img src="/gilangsajachikakaumau/img/hero/1.jpg" style="width: 100%" />
+                <img src="/img/hero/1.jpg" style="width: 100%" />
                 <!-- <div class="text">Caption Text</div> -->
               </div>
 
               <div class="mySlides">
                 <!-- <div class="numbertext">2 / 4</div> -->
-                <img src="/gilangsajachikakaumau/img/hero/2.jpg" style="width: 100%" />
+                <img src="/img/hero/2.jpg" style="width: 100%" />
                 <!-- <div class="text">Caption Two</div> -->
               </div>
 
               <div class="mySlides">
                 <!-- <div class="numbertext">3 / 4</div> -->
-                <img src="/gilangsajachikakaumau/img/hero/3.jpg" style="width: 100%" />
+                <img src="/img/hero/3.jpg" style="width: 100%" />
                 <!-- <div class="text">Caption Three</div> -->
               </div>
 
               <div class="mySlides">
                 <!-- <div class="numbertext">4 / 4</div> -->
-                <img src="/gilangsajachikakaumau/img/hero/4.jpg" style="width: 100%" />
+                <img src="/img/hero/4.jpg" style="width: 100%" />
                 <!-- <div class="text">Caption Three</div> -->
               </div>
               <!-- Next and previous buttons -->
@@ -198,6 +198,8 @@
       </div>
     </section>
 
+    <!-- Section Home -->
+
     <section id="home" class="home">
       <div class="container">
         <div class="row justify-content-center">
@@ -209,45 +211,51 @@
           <div
             class="col-lg-4 justify-content-center w-40 p-50 text-center mt-5"
           >
-            <div class="row">
-              <img
-                src="img/chika.jpeg"
-                alt="Chika Ratu Devina"
-                class="img-responsive rounded-circle"
-              />
-            </div>
             <div class="row text">
               <h2>Chika</h2>
+            </div>
+            <div class="row justify-content-center">
+              <img
+                src="img/Chika.jpg"
+                alt="Chika Ratu Devina"
+                class="img-responsive rounded-4 m-2 p-0"
+              />
+            </div>
+            <div class="row text mt-4">
               <h3>Chika Ratu Devina</h3>
               <p>
                 Putri Pertama dari <br />
-                Bapak Fitrus Ardoni <br />
+                <b>Bapak Fitrus Ardoni</b> <br />
                 dan <br />
-                Ibu Seny Herna Wanty
+                <b>Ibu Seny Herna Wanty</b>
               </p>
             </div>
           </div>
           <div
-            class="col-lg-2 justify-content-center text-center align-content-center"
+            class="dan col-2 justify-content-center text-center align-content-center me-sm-0"
           >
             <h2><br />&</h2>
           </div>
-          <div class="col-lg-4 justify-content-center p-50 text-center mt-5">
-            <div class="row">
-              <img
-                src="img/gilang.jpeg"
-                alt="Muhammad Gilang Pratama"
-                class="img-responsive rounded-circle"
-              />
-            </div>
+          <div
+            class="col-lg-4 justify-content-center w-40 p-50 text-center mt-5"
+          >
             <div class="row text">
               <h2>Gilang</h2>
+            </div>
+            <div class="row justify-content-center">
+              <img
+                src="img/Gilang.jpg"
+                alt="Foto Gilang"
+                class="img-responsive rounded-4 m-2 p-0"
+              />
+            </div>
+            <div class="row text mt-4">
               <h3>Muhammad Gilang Pratama</h3>
               <p>
                 Putra Pertama dari <br />
-                Bapak Bambang H W Soekarno <br />
+                <b>Bapak Bambang Hery Wahyoe Soekarno</b> <br />
                 dan <br />
-                Ibu Asriyati
+                <b>Ibu Asriyati</b>
               </p>
             </div>
           </div>
@@ -255,35 +263,41 @@
       </div>
     </section>
 
-    <section id="info" class="info">
+    <section
+      id="info"
+      class="info d-flex justify-content-center align-items-center"
+    >
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-10 text-center">
-            <h2>Informasi Acara</h2>
-            <p class="alamat">Alamat: Taman Kajoe</p>
+        <div class="row justify-content-center text-center">
+          <h2>The Wedding Day</h2>
+          <div class="deskripsi col-10 text-center my-5">
+            <p class="hari">Sunday, 30 June 2024</p>
+            <div class="simply-countdown" style="text-align: center"></div>
+            <p class="alamat">
+              <b>Taman Kajoe</b><br />
+              Jl. Melati No.57 58, RT.4/RW.2. <br />
+              Ps. Minggu, Kota Jakarta Selatan
+            </p>
             <a
-              href="https://maps.google.com"
+              href="https://maps.app.goo.gl/vhTiQbuqNk6Gfudo9"
               target="_blank"
-              class="btn btn-light btn-sm my-4"
-              >Klik untuk membuka peta</a
-            >
-            <p class="desription">Jl blblabla</p>
+              class="btn btn-light btn-sm my-1"
+              >Klik untuk membuka peta
+            </a>
           </div>
         </div>
-        <div class="row justify-content-center mt-4">
-          <div class="col-md-5 col-10">
+        <div class="container d-flex mt-4 justify-content-center">
+          <div class="col col-lg-8">
             <div class="card text-center text-bg-light mb-5">
-              <div class="card-header">Akad Nikah</div>
+              <div class="card-header">
+                Akad Nikah
+                <div class="memo">Hanya dihadiri anggota keluarga</div>
+              </div>
 
               <div class="card-body">
                 <div class="row justify-content-center">
                   <div class="col-md-6">
-                    <i class="bi bi-calendar d-block"></i>
-                    <span>Minggu, 30 Juni 2024</span>
-                  </div>
-                  <div class="col-md-6">
-                    <i class="bi bi-clock d-block"></i>
-                    <span>11:00 - 12:00 WIB</span>
+                    <p><i class="bi bi-clock d-block"></i> 11:00 - 12:00 WIB</p>
                   </div>
                 </div>
               </div>
@@ -291,37 +305,230 @@
                 Dimohon untuk menjaga ketertiban saat prosesi akad berlangsung
               </div>
             </div>
-          </div>
-          <div class="col-md-5 col-10">
             <div class="card text-center">
-              <div class="card-header">Resepsi Sesi 1</div>
+              <div class="card-header">
+                Resepsi
+                <div class="memo"><span>-</span></div>
+              </div>
               <div class="card-body">
                 <div class="row justify-content-center">
                   <div class="col-md-6">
-                    <i class="bi bi-calendar d-block"></i>
-                    <span>Minggu, 30 Juni 2024</span>
-                  </div>
-                  <div class="col-md-6">
                     <i class="bi bi-clock d-block"></i>
-                    <span>12:00 - 14:00 WIB</span>
+                    <p>12:00 - 14:00 WIB</p>
                   </div>
                 </div>
               </div>
               <div class="card-footer text-body-secondary">
-                Dimohon untuk menjaga ketertiban saat prosesi akad berlangsung
+                Dimohon untuk datang tepat waktu
               </div>
             </div>
           </div>
-          Acara akan dilangsungkan dalam
-          <div class="simply-countdown" style="text-align: center"></div>
         </div>
       </div>
     </section>
+
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="row justify-content-center p-5">
+          <div class="col-md-8 col-10 text-center">
+            <h2>Sobat Tustel</h2>
+            <p>Sekilas potret kita berdua</p>
+          </div>
+        </div>
+
+        <div class="row row-cols-md-4 row-cols-md-3 row-cols-2">
+          <div class="col mt-3">
+            <a
+              href="/img/gallery/1.jpg"
+              data-toggle="lightbox"
+              data-gallery="example-gallery"
+            >
+              <img
+                src="/img/gallery/tn/1.jpg"
+                alt="Image 1"
+                class="img-fluid w-100 fluid"
+              />
+            </a>
+          </div>
+
+          <div class="col mt-3">
+            <a
+              href="/img/gallery/2.jpg"
+              data-toggle="lightbox"
+              data-gallery="example-gallery"
+            >
+              <img
+                src="/img/gallery/tn/2.jpg"
+                alt="Image 2"
+                class="img-fluid w-100 fluid"
+              />
+            </a>
+          </div>
+
+          <div class="col mt-3">
+            <a
+              href="/img/gallery/3.jpg"
+              data-toggle="lightbox"
+              data-gallery="example-gallery"
+            >
+              <img
+                src="/img/gallery/tn/3.jpg"
+                alt="Image 3"
+                class="img-fluid w-100 fluid"
+              />
+            </a>
+          </div>
+
+          <div class="col mt-3">
+            <a
+              href="/img/gallery/4.jpg"
+              data-toggle="lightbox"
+              data-gallery="example-gallery"
+            >
+              <img
+                src="/img/gallery/tn/4.jpg"
+                alt="Image 4"
+                class="img-fluid w-100 fluid"
+              />
+            </a>
+          </div>
+
+          <div class="col mt-3">
+            <a
+              href="/img/gallery/5.jpg"
+              data-toggle="lightbox"
+              data-gallery="example-gallery"
+            >
+              <img
+                src="/img/gallery/tn/5.jpg"
+                alt="Image 5"
+                class="img-fluid w-100 fluid"
+              />
+            </a>
+          </div>
+
+          <div class="col mt-3">
+            <a
+              href="/img/gallery/6.jpg"
+              data-toggle="lightbox"
+              data-gallery="example-gallery"
+            >
+              <img
+                src="/img/gallery/tn/6.jpg"
+                alt="Image 6"
+                class="img-fluid w-100 fluid"
+              />
+            </a>
+          </div>
+
+          <div class="col mt-3">
+            <a
+              href="/img/gallery/7.jpg"
+              data-toggle="lightbox"
+              data-gallery="example-gallery"
+            >
+              <img
+                src="/img/gallery/tn/7.jpg"
+                alt="Image 7"
+                class="img-fluid w-100 fluid"
+              />
+            </a>
+          </div>
+
+          <div class="col mt-3">
+            <a
+              href="/img/gallery/8.jpg"
+              data-toggle="lightbox"
+              data-gallery="example-gallery"
+            >
+              <img
+                src="/img/gallery/tn/8.jpg"
+                alt="Image 8"
+                class="img-fluid w-100 fluid"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="rsvp">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <h2>Konfirmasi Kehadiran</h2>
+            <p>
+              Mohon isi form dibawah ini untuk melakukan konfirmasi kehadiran
+            </p>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <form
+            class="row row-cols-md-auto g-3 align-items-center justify-content-center"
+            method="post"
+            action="https://script.google.com/macros/s/AKfycbyXQi4SplslFtNc06E6HKLZmBm1211Wh-Fj1xbESWkUEsUDVcNbELMtkgkOMER-qGaX/exec"
+            id="my-form"
+          >
+            <div class="col-12">
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nama"
+                  name="nama"
+                  placeholder="Jaka Widada"
+                />
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="mb-3">
+                <label for="status" class="form-label"
+                  >Konfirmasi Kehadiran</label
+                >
+                <select name="status" id="status" class="form-select">
+                  <option selected>Pilih salah satu</option>
+                  <option value="Hadir">Hadir</option>
+                  <option value="Tidak Hadir">Tidak Hadir</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="mb-3">
+                <label for="pax" class="form-label">Jumlah pax</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="pax"
+                  name="pax"
+                  min="0"
+                  max="3"
+                  length="1"
+                  value="1"
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <button class="btn btn-primary">Kirim RSVP</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script src="/lightbox.js"></script>
+
     <script>
       simplyCountdown(".simply-countdown", {
         year: 2024, // required
@@ -329,8 +536,8 @@
         day: 30, // required
         words: {
           //words displayed into the countdown
-          days: { singular: "Day", plural: "Days" },
-          hours: { singular: "jam", plural: "jam" },
+          days: { singular: "Hari", plural: "Hari" },
+          hours: { singular: "Jam", plural: "jam" },
           minutes: { singular: "menit", plural: "menit" },
           seconds: { singular: "detik", plural: "detik" },
         },
@@ -372,6 +579,8 @@
         dots[slideIndex - 1].className += " active";
       }
     </script> -->
+
+    <!-- auto scroll slide -->
     <script>
       let slideIndex = 0;
       showSlides();
@@ -389,6 +598,24 @@
         slides[slideIndex - 1].style.display = "block";
         setTimeout(showSlides, 1000); // Change image every 2 seconds
       }
+    </script>
+
+    <!-- hide submission -->
+    <script>
+      window.addEventListener("load", function () {
+        const form = document.getElementById("my-form");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+            method: "POST",
+            body: data,
+          }).then(() => {
+            alert("Terimakasih telah memberi konfirmasi");
+          });
+        });
+      });
     </script>
   </body>
 </html>
