@@ -185,15 +185,9 @@ body {
 .home .row-judul h2,
 .info .row-judul h2,
 .gallery .row-judul h2,
+.rsvp .row-judul h2,
 .gift .row-judul h2 {
   font-family: "Great Vibes", cursive;
-  font-size: 3rem;
-  line-height: 4rem;
-  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-}
-
-.rsvp .row-judul h2 {
-  font-family: "Montserrat", sans-serif;
   font-size: 3rem;
   line-height: 4rem;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
@@ -353,7 +347,8 @@ body {
 .gallery {
   background-color: #f5f5f5;
   position: relative;
-  min-height: 200vh;
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
 .gallery .img-fluid:hover {
@@ -365,7 +360,8 @@ body {
 
 .rsvp {
   background-color: var(--gold);
-  min-height: 70vh;
+  margin-bottom: auto;
+  margin-top: auto;
   color: white;
 }
 
@@ -389,7 +385,8 @@ body {
 
 .gift {
   background-color: white;
-  min-height: 50vh;
+  margin-bottom: 3rem;
+  margin-top: auto;
   color: var(--gold);
 }
 
@@ -420,6 +417,7 @@ footer {
   justify-content: center;
   align-items: center;
   line-height: 0;
+  z-index: +1;
 }
 
 .audio-icon-wrapper .bi-disc {
@@ -439,6 +437,7 @@ footer {
   justify-content: center;
   align-items: center;
   line-height: 0;
+  z-index: +1;
 }
 
 @keyframes rotating {
@@ -510,7 +509,8 @@ footer {
   .home .row-judul,
   .info .row-judul,
   .gallery .row-judul,
-  .rsvp .row-judul {
+  .rsvp .row-judul,
+  .gift .row-judul {
     padding-top: 2rem;
     padding-bottom: auto;
     text-align: center;
@@ -590,7 +590,6 @@ footer {
   .gallery {
     margin-top: auto;
     margin-bottom: auto;
-    min-height: 80vh;
   }
 
   .rsvp form {
@@ -599,8 +598,7 @@ footer {
 
   .gift {
     margin-top: auto;
-    margin-bottom: auto;
-    min-height: 50vh;
+    margin-bottom: 2rem;
   }
 
   .audio-icon-wrapper .bi-pause-circle {
@@ -619,7 +617,6 @@ footer {
     justify-content: center;
     align-items: center;
     line-height: 0;
-    z-index: +1;
   }
 
   .audio-icon-wrapper .bi-disc {
@@ -639,7 +636,6 @@ footer {
     justify-content: center;
     align-items: center;
     line-height: 0;
-    z-index: +1;
   }
 
   footer {
