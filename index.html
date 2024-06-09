@@ -85,7 +85,7 @@
       let isPlaying = false;
 
       video.addEventListener("ended", function () {
-        const scrollTarget = document.getElementById("arrum"); // Optional: Target section for scrolling (replace with ID)
+        const scrollTarget = document.getElementById("hero"); // Optional: Target section for scrolling (replace with ID)
 
         if (scrollTarget) {
           scrollTarget.scrollIntoView({ behavior: "smooth" });
@@ -118,29 +118,6 @@
         isPlaying = !isPlaying;
       };
     </script>
-
-    <!-- Section Arrum -->
-
-    <section id="arrum" class="arrum bg-white">
-      <div class="container">
-        <div class="row d-flex justify-content-center align-items-end">
-          <div class="col-text text-center">
-            <p>
-              "And of His Signs is that <br />
-              He has created mates for you <br />
-              from your own kind, <br />
-              that you may find <b>peace</b> in them <br />
-              and He has set between you <b>love</b> and <b>mercy</b>"
-            </p>
-            <h3>QS Ar-Rum: 21</h3>
-          </div>
-          <div class="col-btn text-center text-black-5 align-items-end">
-            <a href="#hero" class="btn" onClick="enableScroll()">Continue</a>
-            <h6>or keep scrolling</h6>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Section Hero -->
 
@@ -193,8 +170,31 @@
             <div class="text-container">
               <p>are so excited to invite you</p>
               <h4><span>Our Special Guest</span></h4>
-              <p>to our Wedding</p>
+              <p>to our Wedding!</p>
             </div>
+            <div class="col-btn text-center">
+              <a href="#arrum" class="btn" onClick="enableScroll()">Continue</a>
+            </div>
+            <h6>or keep scrolling</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Arrum -->
+
+    <section id="arrum" class="arrum">
+      <div class="container">
+        <div class="row">
+          <div class="col-text text-center">
+            <p>
+              "And one of His Signs is that<br />
+              He created for you spouses<br />
+              from among yourselves so<br />
+              that you may find <b>comfort</b> in them <br />
+              and He has placed between you <b>compassion</b> and <b>mercy</b>"
+            </p>
+            <h3>QS Ar-Rum: 21</h3>
           </div>
         </div>
       </div>
@@ -204,13 +204,15 @@
 
     <section id="home" class="home">
       <div class="container">
-        <div class="row-judul mb-5">
+        <div class="row-judul">
           <h2>Bride & Groom</h2>
         </div>
       </div>
       <div class="container">
-        <div class="row couple justify-content-evenly">
-          <div class="kotak col-lg-4 justify-content-center text-center mt-5">
+        <div class="row couple justify-content-evenly py-5">
+          <div
+            class="kotak col-lg-4 justify-content-center text-center mt-3 mb-2"
+          >
             <!-- <div class="row nama">
               <h2>Chika</h2>
             </div> -->
@@ -224,17 +226,19 @@
             <div class="row text mt-4">
               <h3>Chika Ratu Devina</h3>
               <p>
-                Daughter of<br />
-                <b>Mr. Fitrus Ardoni</b>
+                First Daughter of<br />
+                <b>Bapak Fitrus Ardoni</b>
                 & <br />
-                <b>Mrs. Seny Herna Wanty</b>
+                <b>Ibu Seny Herna Wanty</b>
               </p>
             </div>
           </div>
           <div class="col-2 dan text-center align-content-center me-sm-5">
             <h2>+</h2>
           </div>
-          <div class="kotak col-lg-4 justify-content-center text-center mt-5">
+          <div
+            class="kotak col-lg-4 justify-content-center text-center mt-3 mb-2"
+          >
             <!-- <div class="row nama">
               <h2>Gilang</h2>
             </div> -->
@@ -248,10 +252,10 @@
             <div class="row text mt-4">
               <h3>Muhammad Gilang Pratama</h3>
               <p>
-                Son of<br />
-                <b>Mr. Bambang Hery W S</b>
+                First Son of<br />
+                <b>Bapak Bambang Hery W S</b>
                 & <br />
-                <b>Mrs. Asriyati</b>
+                <b>Ibu Asriyati</b>
               </p>
             </div>
           </div>
@@ -263,20 +267,23 @@
 
     <section id="info" class="info">
       <div class="container">
-        <div class="row-judul">
-          <h2>The Wedding Day</h2>
+        <div class="row-judul pt-5">
+          <h2>The Wedding Details</h2>
         </div>
       </div>
 
       <div class="container">
         <div class="row deskripsi text-center my-5">
+          <i class="bi bi-calendar-event"></i>
           <p class="hari">Sunday, 30 June 2024</p>
           <div class="simply-countdown" style="text-align: center"></div>
         </div>
         <hr />
-        <div class="row alamat text-center my-5">
-          <p>
-            <b>Taman Kajoe</b><br />
+        <div class="row text-center my-5">
+          <i class="bi bi-pin-map"></i>
+          <p class="hari">Taman Kajoe</p>
+          <p class="alamat">
+            <br />
             Jl. Melati No.57 58, RT.4/RW.2. <br />
             Ps. Minggu, Kota Jakarta Selatan
           </p>
@@ -291,13 +298,13 @@
       </div>
 
       <div
-        class="container d-flex mb-4 justify-content-center align-content-center mt-4"
+        class="container d-flex mb-4 justify-content-center align-content-center mt-4 mb-4 pb-5"
       >
         <div class="col col-lg-8">
           <div class="card text-center text-bg-light my-4">
             <div class="card-header">
-              Akad Nikah
-              <div class="memo">For close family members only</div>
+              Akad
+              <div class="memo">Will be attanded by family members only</div>
             </div>
             <div class="card-body">
               <div class="row justify-content-center">
@@ -313,8 +320,8 @@
 
           <div class="card text-center">
             <div class="card-header">
-              Wedding Ceremony
-              <div class="memo"><span>Friends and Colleagues</span></div>
+              Wedding Reception
+              <div class="memo"><span></span></div>
             </div>
             <div class="card-body">
               <div class="row justify-content-center">
@@ -324,7 +331,7 @@
               </div>
             </div>
             <div class="card-footer text-body-secondary">
-              Please aim to arrive on time.
+              Please be on time ;).
             </div>
           </div>
         </div>
@@ -336,7 +343,7 @@
     <section id="gallery" class="gallery">
       <div class="container">
         <div class="row-judul">
-          <h2>Snapshot!</h2>
+          <h2>a Memento for <br />our future selves</h2>
           <!-- <p>Sekilas potret kita berdua</p> -->
         </div>
       </div>
@@ -523,7 +530,7 @@
       </div>
       <div class="container text-center">
         <div class="row">
-          <p>Please fill the form to confirm your attendance to our wedding!</p>
+          <p>Please confirm your attendance to our wedding. Thank you!</p>
         </div>
       </div>
       <div class="container">
@@ -554,9 +561,9 @@
                 >
                 <select name="status" id="status" class="form-select">
                   <option selected>Please confirm</option>
-                  <option value="Hadir">We're Coming!</option>
+                  <option value="Hadir">I'm coming!</option>
                   <option value="Tidak Hadir">
-                    Sorry, we can't :( Wish Chika and Gilang the best!
+                    Sorry, I can't :( wish Chika & Gilang all the best!
                   </option>
                 </select>
               </div>
@@ -580,7 +587,9 @@
 
             <div class="col-12">
               <div class="mb-3">
-                <label for="wish" class="form-label">Personal Wishes</label>
+                <label for="wish" class="form-label"
+                  >Your Wishes to Chika & Gilang</label
+                >
                 <input
                   type="text"
                   class="form-control"
@@ -591,7 +600,7 @@
               </div>
             </div>
 
-            <div class="row-cols-1">
+            <div class="row-cols-1 mb-5">
               <div
                 class="col d-flex justify-content-around align-content-center"
               >
@@ -606,7 +615,7 @@
     <section id="gift" class="gift">
       <div class="container">
         <div class="row-judul">
-          <h2>Gifts</h2>
+          <h2>Gift</h2>
         </div>
       </div>
       <div class="container mt-5">
@@ -673,8 +682,8 @@
         day: 30, // required
         words: {
           //words displayed into the countdown
-          days: { singular: "Hari", plural: "Hari" },
-          hours: { singular: "Jam", plural: "jam" },
+          days: { singular: "Day", plural: "Days" },
+          hours: { singular: "Hour", plural: "Hours" },
           minutes: { singular: "menit", plural: "menit" },
           seconds: { singular: "detik", plural: "detik" },
         },

@@ -15,49 +15,9 @@ body {
 /* Section Animasi ----------------------------------------------- */
 
 .animasi,
-.arrum,
 .hero {
   position: relative;
   min-height: 100vh;
-}
-
-/* Section Ar-rum ------------------------------------------------ */
-
-.arrum {
-  background-color: #434343;
-}
-
-.arrum .row {
-  min-height: 100vh;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.arrum .col-text {
-  margin-top: 30vh;
-  margin-bottom: auto;
-  color: #5e5e5e !important;
-}
-.arrum .btn {
-  background-color: var(--gold);
-  color: white;
-  margin-top: 0;
-  margin-bottom: 10vh;
-}
-
-.arrum .btn:hover {
-  background-color: white;
-  border-color: #666666;
-  color: var(--gold);
-  margin-top: 0;
-  margin-bottom: 10vh;
-}
-
-.arrum h6 {
-  color: rgb(177, 177, 177);
-}
-
-.arrum h3 {
-  color: var(--gold);
 }
 
 /* Section Hero ------------------------------------------------ */
@@ -175,44 +135,39 @@ body {
   color: var(--gold);
 }
 
-.hero .row .btn:hover {
-  color: var(--gold);
-  background-color: white;
-  box-shadow: var(--shadow);
-  margin: 1rem;
-  width: 30%;
-}
-
-.hero .row .btn {
-  color: white;
+.hero .col-btn .btn {
   background-color: var(--gold);
-  box-shadow: var(--shadow);
-  margin: 1rem;
-  width: 30%;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 5vh;
 }
 
-/* NavBar ------------------------------------------------ */
-
-.mynavbar {
-  background-color: rgba(255, 255, 255, 0.5) !important;
-  backdrop-filter: blur(5px);
-  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+.hero .col-btn .btn:hover {
+  background-color: white;
+  border-color: #666666;
+  color: var(--gold);
+  margin-top: 0;
+  margin-bottom: 5vh;
 }
 
-.mynavbar .nav-link {
-  text-transform: uppercase;
-  text-align: end;
+.hero h6 {
+  color: rgb(177, 177, 177);
 }
 
-.mynavbar .offcanvas {
-  height: 100vh;
+/* Section Ar-rum ------------------------------------------------ */
+
+.arrum {
+  background-color: var(--gold);
+  color: white;
 }
 
-.mynavbar .navbar-brand,
-.mynavbar .offcanvas-title {
-  font-family: "Sacramento", cursive;
-  font-size: 2rem;
-  font-weight: bold;
+.arrum .col-text {
+  margin-top: 20%;
+  margin-bottom: 20%;
+  color: white;
+}
+.arrum h3 {
+  color: white;
 }
 
 /* General Style ------------------------------------------------ */
@@ -230,9 +185,15 @@ body {
 .home .row-judul h2,
 .info .row-judul h2,
 .gallery .row-judul h2,
-.rsvp .row-judul h2,
 .gift .row-judul h2 {
   font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  line-height: 4rem;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.rsvp .row-judul h2 {
+  font-family: "Montserrat", sans-serif;
   font-size: 3rem;
   line-height: 4rem;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
@@ -252,10 +213,10 @@ body {
 /* Home Section ------------------------------------------------ */
 
 .home {
-  background-color: #eeeeee;
-  background-size: cover;
-  background-position: top;
-  min-height: 80vh;
+}
+
+.home .row-judul h2 {
+  word-spacing: 0.8rem;
 }
 
 /* Gilang dan Chika */
@@ -271,6 +232,7 @@ body {
   font-family: "Montserrat", cursive;
   font-size: 10rem;
   font-weight: 100;
+  padding-bottom: 3rem;
   color: var(--gold);
 }
 
@@ -279,7 +241,6 @@ body {
 }
 
 .home .couple {
-  padding-top: 10px;
   margin-left: 0;
   margin-right: 0;
 }
@@ -336,7 +297,7 @@ body {
 
 .info .alamat {
   font-size: 1.1rem;
-  margin-top: 2rem;
+  margin-top: -1rem;
 }
 
 .info .btn {
@@ -538,7 +499,7 @@ footer {
 @media (max-width: 576px) {
   html {
     font-size: 100%;
-    min-height: 90%;
+    min-height: 90vh;
   }
 
   .simply-countdown > .simply-section {
@@ -559,9 +520,8 @@ footer {
   .info .row-judul h2,
   .gallery .row-judul h2,
   .rsvp .row-judul h2 {
-    font-family: "Great Vibes", cursive;
     font-size: 2.8rem;
-    line-height: 4rem;
+    line-height: 3rem;
     text-shadow: var(--shadow);
   }
 
@@ -569,9 +529,6 @@ footer {
     position: relative;
     width: 100%;
     margin-top: 15%;
-  }
-  .home {
-    min-height: 125vh;
   }
 
   .home h2 {
@@ -635,6 +592,7 @@ footer {
     margin-bottom: auto;
     min-height: 80vh;
   }
+
   .rsvp form {
     width: 90vw;
   }

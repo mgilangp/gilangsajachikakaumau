@@ -2,6 +2,7 @@
   overflow: hidden;
   display: table;
   margin: auto;
+  font-size: 0.9rem;
 }
 .simply-countdown > .simply-section {
   width: 30px;
