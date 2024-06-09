@@ -59,6 +59,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="audio-container">
+      <audio id="song" loop>
+        <source src="audio/BG.mp3" type="audio/mp3" />
+      </audio>
+      <div class="audio-icon-wrapper" style="display: none">
+        <i class="bi bi-disc"> </i>
+      </div>
+    </div>
+
     <!-- Section Animasi -->
     <section id="animasi" class="animasi bg-black">
       <video id="myVideo" autoplay controls>
@@ -67,49 +76,48 @@
       </video>
     </section>
 
-    <!-- <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top mynavbar">
-      <div class="container">
-        <a class="navbar-brand" href="#">GilangsajaChikakaumau</a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              GilangsajaChikakaumau
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="#home">Home</a>
-              <a class="nav-link" href="#couple">Getting to know us</a>
-              <a class="nav-link" href="#event">Event Detail</a>
-              <a class="nav-link" href="#rsvp">RSVP</a>
-              <a class="nav-link" href="#gift">Gift</a>
-              <a class="nav-link" href="#gallery">Gallery</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav> -->
+    <script>
+      const video = document.getElementById("myVideo"); // Replace with your video element ID
+      video.volume = 0.1; /* Set initial volume to 50% */ // Function to handle next section action (replace with your desired action)
+      const song = document.querySelector("#song"); // Replace "anotherSong" with the ID of your second song element
+      const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+      const audioIcon = document.querySelector(".audio-icon-wrapper i");
+      let isPlaying = false;
+
+      video.addEventListener("ended", function () {
+        const scrollTarget = document.getElementById("arrum"); // Optional: Target section for scrolling (replace with ID)
+
+        if (scrollTarget) {
+          scrollTarget.scrollIntoView({ behavior: "smooth" });
+        } else {
+          // Scroll to the bottom of the page if no target section provided
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: "smooth",
+          });
+        }
+
+        // Play another song after autoscroll
+        song.volume = 0.1;
+        audioIconWrapper.style.display = "flex";
+        song.play();
+        isPlaying = true;
+      });
+
+      audioIconWrapper.onclick = function () {
+        if (isPlaying) {
+          song.pause();
+          audioIcon.classList.remove("bi-disc");
+          audioIcon.classList.add("bi-pause-circle");
+        } else {
+          song.play();
+          audioIcon.classList.remove("bi-pause-circle");
+          audioIcon.classList.add("bi-disc");
+        }
+
+        isPlaying = !isPlaying;
+      };
+    </script>
 
     <!-- Section Arrum -->
 
@@ -184,7 +192,7 @@
             <h2>Gilang</h2>
             <div class="text-container">
               <p>are so excited to invite you</p>
-                <h4><span>Our Special Guest</span></h4>
+              <h4><span>Our Special Guest</span></h4>
               <p>to our Wedding</p>
             </div>
           </div>
@@ -333,8 +341,9 @@
         </div>
       </div>
       <div class="container">
-        <div class="row row-cols-md-3 row-cols-md-3 row-cols-3 d-flex justify-content-evenly">
-          
+        <div
+          class="row row-cols-md-3 row-cols-md-3 row-cols-3 d-flex justify-content-evenly"
+        >
           <div class="col mt-3">
             <a
               href="img/gallery/1.jpg"
@@ -348,7 +357,7 @@
               />
             </a>
           </div>
-          
+
           <div class="col mt-3">
             <a
               href="img/gallery/2.jpg"
@@ -362,7 +371,7 @@
               />
             </a>
           </div>
-          
+
           <div class="col mt-3">
             <a
               href="img/gallery/3.jpg"
@@ -376,7 +385,7 @@
               />
             </a>
           </div>
-          
+
           <div class="col mt-3">
             <a
               href="img/gallery/4.jpg"
@@ -390,7 +399,7 @@
               />
             </a>
           </div>
-          
+
           <div class="col mt-3">
             <a
               href="img/gallery/5.jpg"
@@ -404,7 +413,7 @@
               />
             </a>
           </div>
-          
+
           <div class="col mt-3">
             <a
               href="img/gallery/6.jpg"
@@ -418,7 +427,7 @@
               />
             </a>
           </div>
-          
+
           <div class="col mt-3">
             <a
               href="img/gallery/7.jpg"
@@ -432,7 +441,7 @@
               />
             </a>
           </div>
-          
+
           <div class="col mt-3">
             <a
               href="img/gallery/8.jpg"
@@ -446,7 +455,7 @@
               />
             </a>
           </div>
-          
+
           <div class="col mt-3">
             <a
               href="img/gallery/9.jpg"
@@ -460,7 +469,7 @@
               />
             </a>
           </div>
-          
+
           <div class="col mt-3">
             <a
               href="img/gallery/10.jpg"
@@ -474,7 +483,7 @@
               />
             </a>
           </div>
-          
+
           <div class="col mt-3">
             <a
               href="img/gallery/11.jpg"
@@ -488,7 +497,7 @@
               />
             </a>
           </div>
-          
+
           <div class="col mt-3">
             <a
               href="img/gallery/12.jpg"
@@ -502,7 +511,6 @@
               />
             </a>
           </div>
-
         </div>
       </div>
     </section>
@@ -606,14 +614,15 @@
           <div class="col md-6">
             <ul class="list-group">
               <li class="list-group-item">
-                <div class=" fw-bolder">Mandiri</div>
+                <div class="fw-bolder">Mandiri</div>
                 120 00 0657 8012
                 <p>Muhammad Gilang Pratama</p>
               </li>
               <li class="list-group-item">
-                <div class=" fw-bolder">BCA</div>
+                <div class="fw-bolder">BCA</div>
                 604 203 5226
-                <br><p>Muhammad Gilang Pratama</p>
+                <br />
+                <p>Muhammad Gilang Pratama</p>
               </li>
             </ul>
           </div>
@@ -621,33 +630,30 @@
       </div>
     </section>
 
-    <footer style="background-color: var(--gold); color: white;">
+    <footer style="background-color: var(--gold); color: white">
       <div class="container">
         <div class="row">
           <div class="col text-center">
-            <small class="block">&copy;
-              <a href="https://instagram.com/_mgilangp" class="" style="color: white;">mgilangp</a>
-              2024</small>
+            <small class="block"
+              >&copy;
+              <a
+                href="https://instagram.com/_mgilangp"
+                class=""
+                style="color: white"
+                >mgilangp</a
+              >
+              2024</small
+            >
           </div>
         </div>
       </div>
     </footer>
 
-    <div id="audio-container"></div>
-      <audio id="song" loop>
-        <source src="audio/BG.mp3" type="audio/mp3" />
-      </audio>
-      <div class="audio-icon-wrapper" style="display: none">
-        <i class="bi bi-disc"> </i>
-      </div>
-    </div>
-
-
     <script>
       const urlParams = new URLSearchParams(window.location.search);
-      const nama = urlParams.get('n');
+      const nama = urlParams.get("n");
       console.log(nama);
-      const namaContainer = document.querySelector('.hero h4 span');
+      const namaContainer = document.querySelector(".hero h4 span");
       console.log(namaContainer);
       namaContainer.innerText = nama;
     </script>
@@ -659,49 +665,6 @@
     ></script>
 
     <script src="lightbox.js"></script>
-
-    <script>
-      const video = document.getElementById("myVideo"); // Replace with your video element ID
-      video.volume = 0.1; /* Set initial volume to 50% */ // Function to handle next section action (replace with your desired action)
-      const song = document.querySelector("#song"); // Replace "anotherSong" with the ID of your second song element
-      const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
-      const audioIcon = document.querySelector(".audio-icon-wrapper i");
-      let isPlaying = false;
-
-      video.addEventListener("ended", function () {
-        const scrollTarget = document.getElementById("arrum"); // Optional: Target section for scrolling (replace with ID)
-
-        if (scrollTarget) {
-          scrollTarget.scrollIntoView({ behavior: "smooth" });
-        } else {
-          // Scroll to the bottom of the page if no target section provided
-          window.scrollTo({
-            top: document.documentElement.scrollHeight,
-            behavior: "smooth",
-          });
-        }
-
-        // Play another song after autoscroll
-        song.volume = 0.1;
-        audioIconWrapper.style.display = "flex";
-        song.play();
-        isPlaying = true;
-      });
-
-      audioIconWrapper.onclick = function () {
-        if (isPlaying) {
-          song.pause();
-          audioIcon.classList.remove("bi-disc");
-          audioIcon.classList.add("bi-pause-circle");
-        } else {
-          song.play();
-          audioIcon.classList.remove("bi-pause-circle");
-          audioIcon.classList.add("bi-disc");
-        }
-
-        isPlaying = !isPlaying;
-      };
-    </script>
 
     <script>
       simplyCountdown(".simply-countdown", {
@@ -719,40 +682,6 @@
         inline: true, //set to true to get an inline basic countdown like : 24 days, 4 hours, 2 minutes, 5 seconds
       });
     </script>
-    <!-- <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
-
-      // Next/previous controls
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
-
-      // Thumbnail image controls
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-      }
-    </script> -->
 
     <!-- auto scroll slide -->
     <script>
@@ -773,7 +702,6 @@
         setTimeout(showSlides, 1000); // Change image every 2 seconds
       }
     </script>
-
 
     <!-- hide submission -->
     <script>
