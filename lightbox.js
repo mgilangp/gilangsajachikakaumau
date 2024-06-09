@@ -188,8 +188,8 @@
                 '" style="min-height: 100px">\n\t\t\t\t\t'
               )
               .concat(
-                '<div class="position-absolute top-50 start-50 translate-middle text-white"><div class="spinner-border" style="width: 3rem height: 3rem" role="status"></div></div>',
-                '\n\t\t\t\t\t<div class="ratio ratio-1x1" style="background-color: #000;">'
+                '<div class="position-absolute top-50 start-50 translate-middle text-white"><div class="spinner-border" style="width: 3rem; height: 3rem" role="status"></div></div>',
+                '\n\t\t\t\t\t<div class="ratio ratio-1x1 m-0" style=" height: 90vh; background-color: #000;">'
               )
               .concat(d, "</div>\n\t\t\t\t\t")
               .concat(r, "\n\t\t\t\t</div>");

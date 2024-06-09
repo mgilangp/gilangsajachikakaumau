@@ -10,19 +10,57 @@
 body {
   font-size: 1.2rem;
   font-family: "Montserrat", sans-serif;
-  min-height: 4000px;
 }
 
-/* Section Animasi */
+/* Section Animasi ----------------------------------------------- */
 
 .animasi,
-.hero,
-.home {
+.arrum,
+.hero {
   position: relative;
   min-height: 100vh;
 }
 
-/* Section Hero */
+/* Section Ar-rum ------------------------------------------------ */
+
+.arrum {
+  background-color: #434343;
+}
+
+.arrum .row {
+  min-height: 100vh;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.arrum .col-text {
+  margin-top: 30vh;
+  margin-bottom: auto;
+  color: #5e5e5e !important;
+}
+.arrum .btn {
+  background-color: var(--gold);
+  color: white;
+  margin-top: 0;
+  margin-bottom: 10vh;
+}
+
+.arrum .btn:hover {
+  background-color: white;
+  border-color: #666666;
+  color: var(--gold);
+  margin-top: 0;
+  margin-bottom: 10vh;
+}
+
+.arrum h6 {
+  color: rgb(177, 177, 177);
+}
+
+.arrum h3 {
+  color: var(--gold);
+}
+
+/* Section Hero ------------------------------------------------ */
 
 .hero .col-image {
   position: relative;
@@ -96,6 +134,7 @@ body {
   position: relative;
   width: 30%;
   margin-top: auto;
+  margin-bottom: auto;
 }
 
 .hero .text-container {
@@ -152,7 +191,7 @@ body {
   width: 30%;
 }
 
-/* NavBar -------------------------------------- */
+/* NavBar ------------------------------------------------ */
 
 .mynavbar {
   background-color: rgba(255, 255, 255, 0.5) !important;
@@ -176,44 +215,75 @@ body {
   font-weight: bold;
 }
 
-/* Home Section */
+/* General Style ------------------------------------------------ */
+
+.home .row-judul,
+.info .row-judul,
+.gallery .row-judul,
+.rsvp .row-judul,
+.gift .row-judul {
+  padding-top: 5rem;
+  padding-bottom: auto;
+  text-align: center;
+}
+
+.home .row-judul h2,
+.info .row-judul h2,
+.gallery .row-judul h2,
+.rsvp .row-judul h2,
+.gift .row-judul h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  line-height: 4rem;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.home .row-judul h2,
+.gallery .row-judul h2,
+.gift .row-judul h2 {
+  color: var(--gold);
+}
+
+.info .row-judul h2,
+.rsvp .row-judul h2 {
+  color: white;
+}
+
+/* Home Section ------------------------------------------------ */
 
 .home {
   background-color: #eeeeee;
   background-size: cover;
   background-position: top;
-  min-height: 120vh;
+  min-height: 80vh;
 }
 
-.home h2,
-.info h2,
-.gallery h2,
-.rsvp h2 {
+/* Gilang dan Chika */
+
+.home .nama h2 {
   font-family: "Great Vibes", cursive;
-  color: var(--gold);
   font-size: 3rem;
-  line-height: 4rem;
-  text-shadow: var(--shadow);
-  margin-top: 10%;
+  font-weight: bold;
+  text-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+}
+
+.home .dan h2 {
+  font-family: "Montserrat", cursive;
+  font-size: 10rem;
+  font-weight: 100;
+  color: var(--gold);
 }
 
 .home h3 {
   font-family: "Montserrat", sans-serif;
 }
 
-.home p {
-  font-family: "Montserrat", sans-serif;
-}
 .home .couple {
   padding-top: 10px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.home .couple h2 {
-  fonts-family: "Great Vibes", cursive;
-  font-size: 5rem;
-  color: var(--gold);
-  margin-bottom: 2rem;
-}
 .home .couple h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
@@ -222,6 +292,8 @@ body {
 }
 
 .home .couple p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
   color: #666666;
 }
 
@@ -233,32 +305,33 @@ body {
   margin-bottom: 4rem;
 }
 
+.home .couple .kotak {
+  width: 25rem;
+}
+
+/* Detail Wedding Date ------------------------------------------------ */
+
 .info {
-  background-color: var(--bg);
+  background-color: var(--gold);
   color: white;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   min-height: 100vh;
 }
 
 .info .deskripsi {
   margin-top: auto;
   margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.info h2 {
-  font-family: "Great Vibes", cursive;
-  font-size: 3rem;
-  color: white;
-}
-.info .p {
-  margin: auto;
-}
 .info .hari {
   font-size: 1.8rem;
   font-weight: bold;
-
   margin-bottom: 0.1rem;
+}
+
+.info .hari:hover {
+  text-shadow: 0px 0px 50px rgb(255, 255, 255);
 }
 
 .info .alamat {
@@ -269,13 +342,29 @@ body {
 .info .btn {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20vw;
+  color: var(--gold) !important;
+  background-color: white !important;
+}
+
+.info .btn:hover {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: white !important;
+  background-color: var(--gold) !important;
 }
 
 .info .card {
   background-color: rgba(255, 255, 255, 0.2) !important;
   color: white !important;
-  border: 1px solid #999;
+  border: 1px solid #dad4cc;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .info .card-header {
   border-bottom: 1px solid #999;
   text-transform: uppercase;
@@ -287,25 +376,40 @@ body {
   font-style: italic;
   font-size: 0.6rem;
   font-weight: 300;
-  text-transform: capitalize;
 }
 
 .info .card-body {
   font-size: 1.4rem;
 }
+
 .info .card-footer {
   font-size: 0.8rem;
   color: white !important;
 }
 
+/* Section Gallery ------------------------------------------------ */
+
 .gallery {
   background-color: #f5f5f5;
   position: relative;
-  min-height: 130vh;
+  min-height: 200vh;
 }
 
+.gallery .img-fluid:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.7) 0px 0px 10px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/* Section RSVP ------------------------------------------------ */
+
 .rsvp {
-  background-color: #555555;
+  background-color: var(--gold);
+  min-height: 70vh;
+  color: white;
+}
+
+.rsvp form {
+  width: 40vw;
 }
 
 .rsvp .btn {
@@ -318,6 +422,71 @@ body {
   background-color: white;
   color: var(--gold);
   border: 1px solid var(--gold);
+}
+
+/* Section Gift ------------------------- */
+
+.gift {
+  background-color: white;
+  min-height: 50vh;
+  color: var(--gold);
+}
+
+.gift p {
+  font-size: 0.8rem;
+}
+
+footer {
+  padding: 2rem;
+  color: var(--gold);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.audio-icon-wrapper .bi-pause-circle {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+.audio-icon-wrapper .bi-disc {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Media Query */
@@ -377,14 +546,32 @@ body {
     margin: 5px;
   }
 
-  .home {
-    min-height: 160vh;
+  .home .row-judul,
+  .info .row-judul,
+  .gallery .row-judul,
+  .rsvp .row-judul {
+    padding-top: 2rem;
+    padding-bottom: auto;
+    text-align: center;
+  }
+
+  .home .row-judul h2,
+  .info .row-judul h2,
+  .gallery .row-judul h2,
+  .rsvp .row-judul h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: 2.8rem;
+    line-height: 4rem;
+    text-shadow: var(--shadow);
   }
 
   .hero .col-text {
     position: relative;
     width: 100%;
     margin-top: 15%;
+  }
+  .home {
+    min-height: 125vh;
   }
 
   .home h2 {
@@ -414,7 +601,7 @@ body {
 
   .home .couple h3 {
     font-family: "Montserrat", sans-serif;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--gold);
   }
@@ -426,8 +613,77 @@ body {
   }
 
   .home .dan h2 {
-    font-size: 4rem;
-    margin-top: -1.2rem;
+    font-family: "Montserrat", cursive;
+    font-size: 5rem;
+    font-weight: 100;
+    margin-top: 1rem;
     margin-bottom: -1.5rem;
+  }
+
+  .info .btn {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+  }
+
+  .info .card {
+    width: 90vw;
+  }
+
+  .gallery {
+    margin-top: auto;
+    margin-bottom: auto;
+    min-height: 80vh;
+  }
+  .rsvp form {
+    width: 90vw;
+  }
+
+  .gift {
+    margin-top: auto;
+    margin-bottom: auto;
+    min-height: 50vh;
+  }
+
+  .audio-icon-wrapper .bi-pause-circle {
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: white;
+    opacity: 0.5;
+    mix-blend-mode: difference;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+  }
+
+  .audio-icon-wrapper .bi-disc {
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: white;
+    opacity: 0.5;
+    mix-blend-mode: difference;
+    animation: rotating 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+  }
+
+  footer {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
