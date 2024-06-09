@@ -619,6 +619,7 @@ footer {
     justify-content: center;
     align-items: center;
     line-height: 0;
+    z-index: +1;
   }
 
   .audio-icon-wrapper .bi-disc {
@@ -638,6 +639,7 @@ footer {
     justify-content: center;
     align-items: center;
     line-height: 0;
+    z-index: +1;
   }
 
   footer {
