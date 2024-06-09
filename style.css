@@ -98,19 +98,19 @@ body {
 }
 
 .hero .text-container {
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .hero h2 {
   font-family: "Great Vibes", cursive;
-  font-size: 5rem;
+  font-size: 3rem;
   color: var(--gold);
   text-shadow: var(--shadow);
 }
 
 .hero h3 {
   font-family: "Great Vibes", cursive;
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--gold);
   text-shadow: var(--shadow);
   margin-top: -2rem;
