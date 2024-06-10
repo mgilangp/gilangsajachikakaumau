@@ -196,36 +196,22 @@ body {
 
 .home h3 {
   font-family: "Montserrat", sans-serif;
-}
-
-.home .couple {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.home .couple h3 {
-  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--gold);
 }
 
-.home .couple p {
+.home p {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  color: #666666;
+  color: #222;
 }
 
-.home .couple img {
-  width: 60%;
+.home img {
+  width: 70%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 4rem;
-}
-
-.home .couple .kotak {
-  width: 25rem;
 }
 
 /* Detail Wedding Date ------------------------------------------------ */
