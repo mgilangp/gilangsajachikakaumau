@@ -192,6 +192,7 @@ body {
   font-weight: 100;
   color: var(--gold);
   max-height: 10vh;
+  transform: translateY(-6rem);
 }
 
 .home h3 {
@@ -404,34 +405,16 @@ footer {
   .simply-countdown > .simply-section {
     padding: 70px;
   }
-  .home .heart {
-    display: none;
-  }
 }
-
 /* Tablet */
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
   }
 
-  .hero .col-image {
-    flex: none;
-    width: 100%;
-    overflow: hidden;
-  }
   .simply-countdown > .simply-section {
     padding: 60px;
     margin: 5px;
-  }
-
-  .mynavbar .nav-link {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .sticky-top {
-    /* overflow: hidden; */
   }
 }
 
@@ -449,6 +432,10 @@ footer {
 
   .home .dan h2 {
     font-size: 5rem;
+    max-height: 10vh;
+    transform: translateY(0rem);
+    margin-top: -1rem;
+    margin-bottom: -1rem;
   }
 
   .info .btn {
