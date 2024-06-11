@@ -96,14 +96,18 @@ body {
   font-family: "Great Vibes", cursive;
   color: var(--gold);
   text-shadow: var(--shadow);
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .hero h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  margin: 0;
 }
 
 .hero h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
 .hero h4 {
