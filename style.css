@@ -20,6 +20,29 @@ body {
   box-shadow: 0px 0px 15px #434343;
 }
 
+video {
+  top: 0%;
+  left: 0;
+  width: 100%; /* Full width for all screen sizes */
+  height: 100vh;
+}
+
+.animasi .col-btn .btn:hover {
+  background-color: white;
+  border-color: #666666;
+  color: var(--gold);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.animasi .col-btn .btn {
+  background-color: var(--gold);
+  color: white;
+  border-color: #666666;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Section Hero ------------------------------------------------ */
 
 .hero .col-image {
@@ -114,24 +137,6 @@ body {
   font-size: 1.2rem;
   color: var(--gold);
   line-height: 1.8rem;
-}
-
-.hero p {
-  font-size: 0.8rem;
-  color: var(--gold);
-  color: rgb(177, 177, 177);
-}
-
-.hero .col-btn .btn:hover {
-  background-color: white;
-  border-color: #666666;
-  color: var(--gold);
-}
-
-.hero .col-btn .btn {
-  background-color: var(--gold);
-  color: white;
-  border-color: #666666;
 }
 
 /* Section Ar-rum ------------------------------------------------ */
@@ -430,6 +435,10 @@ footer {
   .simply-countdown > .simply-section {
     padding: 70px;
     margin: 5px;
+  }
+
+  video {
+    height: 100%;
   }
 
   .home .dan h2 {
