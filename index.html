@@ -110,7 +110,7 @@
     <!-- Section Hero -->
     <section
       id="hero"
-      class="hero p-1 p-md-3 align-items-center bg-white"
+      class="hero p-1 p-md-3 align-items-center bg-dark-subtle"
     >
       <div class="container-fluid align-items-center bg-white">
         <div class="row justify-content-center align-items-center">
@@ -661,20 +661,24 @@
     <script>
       const rootElement = document.querySelector(":root");
 
-      function disableScroll() {
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+      // function disableScroll() {
+      //   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      //   scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
-        window.onscroll = function () {
-          window.scrollTo(scrollTop, scrollLeft);
-        };
+      //   window.onscroll = function () {
+      //     window.scrollTo(scrollTop, scrollLeft);
+      //   };
 
-        rootElement.style.scrollBehavior = "auto";
-      }
+      //   rootElement.style.scrollBehavior = "auto";
+      // }
 
       function enableScroll() {
         window.onscroll = function () {};
         rootElement.style.scrollBehavior = "smooth";
+        song.volume = 0.1;
+        audioIconWrapper.style.display = "flex";
+        song.play();
+        isPlaying = true;
       }
 
       disableScroll();
