@@ -85,8 +85,7 @@
           });
         }
 
-        // Play another song after autoscroll
-        song.volume = 0.1;
+        song.volume = 0.1; // Play another song after autoscroll
         audioIconWrapper.style.display = "flex";
         song.play();
         isPlaying = true;
@@ -326,7 +325,10 @@
               </div>
             </div>
             <div class="card-footer text-body-secondary">
-              <i>Smart casual (no white, please). <br />And be on time.</i>
+              <i
+                >Dress code: smart casual (no white, please). <br />And be on
+                time.</i
+              >
             </div>
           </div>
         </div>
@@ -660,27 +662,12 @@
     <script>
       const rootElement = document.querySelector(":root");
 
-      // function disableScroll() {
-      //   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      //   scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
-      //   window.onscroll = function () {
-      //     window.scrollTo(scrollTop, scrollLeft);
-      //   };
-
-      //   rootElement.style.scrollBehavior = "auto";
-      // }
-
       function enableScroll() {
-        // window.onscroll = function () {};
-        // rootElement.style.scrollBehavior = "smooth";
         song.volume = 0.1;
         audioIconWrapper.style.display = "flex";
         song.play();
         isPlaying = true;
       }
-
-      // disableScroll();
     </script>
 
     <script>
