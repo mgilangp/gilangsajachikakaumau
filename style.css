@@ -96,8 +96,6 @@ body {
   font-family: "Great Vibes", cursive;
   color: var(--gold);
   text-shadow: var(--shadow);
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .hero h2 {
