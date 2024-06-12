@@ -712,6 +712,7 @@
 
       video.addEventListener("ended", function () {
         const scrollTarget = document.getElementById("hero"); // Optional: Target section for scrolling (replace with ID)
+        function enableScroll();
         if (scrollTarget) {
           scrollTarget.scrollIntoView({ behavior: "smooth" });
         } else {
@@ -726,7 +727,6 @@
         audioIconWrapper.style.display = "flex";
         song.play();
         isPlaying = true;
-        function enableScroll();
       });
 
       audioIconWrapper.onclick = function () {
@@ -798,6 +798,7 @@
           false
         );
         song.play();
+        audioIconWrapper.style.display = "flex";
         audioIcon.classList.remove("bi-pause-circle");
         audioIcon.classList.add("bi-disc");
         isPlaying = !isPlaying;
