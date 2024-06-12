@@ -715,10 +715,6 @@
           });
         }
         enableScroll();
-        song.volume = 0.1; // Play another song after autoscroll
-        audioIconWrapper.style.display = "flex";
-        song.play();
-        isPlaying = true;
       });
 
       audioIconWrapper.onclick = function () {
@@ -731,7 +727,6 @@
           audioIcon.classList.remove("bi-pause-circle");
           audioIcon.classList.add("bi-disc");
         }
-
         isPlaying = !isPlaying;
       };
 
@@ -788,11 +783,13 @@
           preventDefaultForScrollKeys,
           false
         );
-        song.play();
         audioIconWrapper.style.display = "flex";
         audioIcon.classList.remove("bi-pause-circle");
         audioIcon.classList.add("bi-disc");
+        song.play();
+        song.volume = 0.1; // Play another song after autoscroll
         isPlaying = !isPlaying;
+        audioIconWrapper.style.display = "flex";
       }
     </script>
   </body>
