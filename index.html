@@ -46,7 +46,7 @@
     </div>
 
     <!-- Section Animasi -->
-    <section id="an" class="an bg-white">
+    <section id="animasi" class="animasi bg-white">
       <div class="container">
         <div class="row justify-content-evenly">
           <div class="col-12 col-lg-9">
@@ -260,7 +260,7 @@
               <div class="row justify-content-center">
                 <div class="col-md-6">
                   <div class="row">
-                    <p class="bi bi-clock d-block">  11:00 WIB</p>
+                    <p class="bi bi-clock d-block">11:00 WIB</p>
                   </div>
                 </div>
               </div>
@@ -278,7 +278,7 @@
             <div class="card-body">
               <div class="row justify-content-center">
                 <div class="col-md-6">
-                  <p class="bi bi-clock d-block">  <span>15</span>:00 WIB</p>
+                  <p class="bi bi-clock d-block"><span>15</span>:00 WIB</p>
                 </div>
               </div>
             </div>
@@ -619,20 +619,12 @@
 
     <script>
       const urlParams = new URLSearchParams(window.location.search);
+      const hr = urlParams.get("hr");
       const to = urlParams.get("to");
-      console.log(to);
       const namaContainer = document.querySelector(".hero h4 span");
-      console.log(namaContainer);
+      const jamContainer = document.querySelector(".info span");
       namaContainer.innerText = to;
-    </script>
-
-    <script>
-      const urlParams2 = new URLSearchParams(window.location.search);
-      const hr = urlParams2.get("hr");
-      console.log(hr);
-      const namaContainer2 = document.querySelector(".info span");
-      console.log(namaContainer2);
-      namaContainer2.innerText = hr;
+      jamContainer.innerText = hr;
     </script>
 
     <script
@@ -682,13 +674,9 @@
 
     <!-- hide submission -->
     <script>
-        const video = document.getElementById("myVideo"); // Replace with your video element ID
-        const form = document.getElementById("my-form");
-      
-      window.addEventListener("load", function () {  
-        if (video.muted === false) {    
-             video.muted = true;
-          }
+      const form = document.getElementById("my-form");
+
+      window.addEventListener("load", function () {
         form.addEventListener("submit", function (e) {
           e.preventDefault();
           const data = new FormData(form);
@@ -716,9 +704,7 @@
       let isPlaying = false;
       const scrollTarget = document.getElementById("hero"); // Optional: Target section for scrolling (replace with ID)
 
-
       video.addEventListener("ended", function () {
-        enableScroll();
         if (scrollTarget) {
           scrollTarget.scrollIntoView({ behavior: "smooth" });
         } else {
@@ -728,7 +714,7 @@
             behavior: "smooth",
           });
         }
-
+        enableScroll();
         song.volume = 0.1; // Play another song after autoscroll
         audioIconWrapper.style.display = "flex";
         song.play();
@@ -748,8 +734,7 @@
 
         isPlaying = !isPlaying;
       };
-    </script>
-    <script>
+
       // left: 37, up: 38, right: 39, down: 40,
       // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
       var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
