@@ -684,6 +684,9 @@
     <script>
       window.addEventListener("load", function () {
         const form = document.getElementById("my-form");
+        if (video.muted === false) {    
+             video.muted = true;
+          }
         form.addEventListener("submit", function (e) {
           e.preventDefault();
           const data = new FormData(form);
@@ -709,10 +712,11 @@
       const audioIcon = document.querySelector(".audio-icon-wrapper i");
       const continueButton = document.querySelector(".an unlock");
       let isPlaying = false;
+      const scrollTarget = document.getElementById("hero"); // Optional: Target section for scrolling (replace with ID)
+
 
       video.addEventListener("ended", function () {
-        const scrollTarget = document.getElementById("hero"); // Optional: Target section for scrolling (replace with ID)
-        function enableScroll();
+        enableScroll();
         if (scrollTarget) {
           scrollTarget.scrollIntoView({ behavior: "smooth" });
         } else {
