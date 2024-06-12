@@ -46,7 +46,7 @@
     </div>
 
     <!-- Section Animasi -->
-    <section id="animasi" class="animasi bg-white">
+    <section id="an" class="an bg-white">
       <div class="container">
         <div class="row justify-content-evenly">
           <div class="col-12 col-lg-9">
@@ -707,7 +707,7 @@
       const song = document.querySelector("#song"); // Replace "anotherSong" with the ID of your second song element
       const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
       const audioIcon = document.querySelector(".audio-icon-wrapper i");
-      const continueButton = document.querySelector(".animasi unlock");
+      const continueButton = document.querySelector(".an unlock");
       let isPlaying = false;
 
       video.addEventListener("ended", function () {
@@ -726,6 +726,7 @@
         audioIconWrapper.style.display = "flex";
         song.play();
         isPlaying = true;
+        function enableScroll();
       });
 
       audioIconWrapper.onclick = function () {
@@ -796,7 +797,6 @@
           preventDefaultForScrollKeys,
           false
         );
-
         song.play();
         audioIcon.classList.remove("bi-pause-circle");
         audioIcon.classList.add("bi-disc");

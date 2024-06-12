@@ -14,7 +14,7 @@ body {
 
 /* Section Animasi ----------------------------------------------- */
 
-.animasi,
+.an,
 .hero {
   min-height: 100vh;
   box-shadow: 0px 0px 15px #434343;
@@ -27,7 +27,7 @@ video {
   height: 100vh;
 }
 
-.animasi .col-btn .btn:hover {
+.an .col-btn .btn:hover {
   background-color: white;
   border-color: #666666;
   color: var(--gold);
@@ -35,7 +35,7 @@ video {
   margin-right: auto;
 }
 
-.animasi .col-btn .btn {
+.an .col-btn .btn {
   background-color: var(--gold);
   color: white;
   border-color: #666666;
