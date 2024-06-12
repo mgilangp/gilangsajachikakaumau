@@ -682,8 +682,10 @@
 
     <!-- hide submission -->
     <script>
-      window.addEventListener("load", function () {
+        const video = document.getElementById("myVideo"); // Replace with your video element ID
         const form = document.getElementById("my-form");
+      
+      window.addEventListener("load", function () {  
         if (video.muted === false) {    
              video.muted = true;
           }
