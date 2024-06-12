@@ -37,7 +37,7 @@
   <body>
     <!-- Audio -->
     <div id="audio-container">
-      <audio id="song" autoplay loop>
+      <audio id="song" loop>
         <source src="audio/BG.mp3" type="audio/mp3" />
       </audio>
       <div class="audio-icon-wrapper" style="display: none">
@@ -56,55 +56,13 @@
             </video>
           </div>
           <div class="row col-12 col-lg-3 mb-5 mt-5">
-            <div class="btn col-btn text-center align-self-center">
+            <div class="btn col-btn text-center align-self-center unlock">
               <a href="#hero" class="btn" onClick="enableScroll()">Continue</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Script animasi dan audio  -->
-    <script>
-      const video = document.getElementById("myVideo"); // Replace with your video element ID
-      video.volume = 0.1; /* Set initial volume to 50% */ // Function to handle next section action (replace with your desired action)
-      const song = document.querySelector("#song"); // Replace "anotherSong" with the ID of your second song element
-      const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
-      const audioIcon = document.querySelector(".audio-icon-wrapper i");
-      let isPlaying = false;
-
-      video.addEventListener("ended", function () {
-        const scrollTarget = document.getElementById("hero"); // Optional: Target section for scrolling (replace with ID)
-        if (scrollTarget) {
-          scrollTarget.scrollIntoView({ behavior: "smooth" });
-        } else {
-          // Scroll to the bottom of the page if no target section provided
-          window.scrollTo({
-            top: document.documentElement.scrollHeight,
-            behavior: "smooth",
-          });
-        }
-
-        song.volume = 0.1; // Play another song after autoscroll
-        audioIconWrapper.style.display = "flex";
-        song.play();
-        isPlaying = true;
-      });
-
-      audioIconWrapper.onclick = function () {
-        if (isPlaying) {
-          song.pause();
-          audioIcon.classList.remove("bi-disc");
-          audioIcon.classList.add("bi-pause-circle");
-        } else {
-          song.play();
-          audioIcon.classList.remove("bi-pause-circle");
-          audioIcon.classList.add("bi-disc");
-        }
-
-        isPlaying = !isPlaying;
-      };
-    </script>
 
     <!-- Section Hero -->
     <section id="hero" class="hero p-1 p-md-3 align-items-center bg-white">
@@ -302,7 +260,7 @@
               <div class="row justify-content-center">
                 <div class="col-md-6">
                   <div class="row">
-                    <p class="bi bi-clock d-block"> 11:00 WIB</p>
+                    <p class="bi bi-clock d-block">11:00 WIB</p>
                   </div>
                 </div>
               </div>
@@ -320,7 +278,7 @@
             <div class="card-body">
               <div class="row justify-content-center">
                 <div class="col-md-6">
-                  <p class="bi bi-clock d-block"> <span>15</span>:00 WIB</p>
+                  <p class="bi bi-clock d-block"><span>15</span>:00 WIB</p>
                 </div>
               </div>
             </div>
@@ -576,8 +534,8 @@
                   class="form-control"
                   id="pax"
                   name="pax"
-                  min="1"
-                  max="2"
+                  min="0"
+                  max="3"
                   length="1"
                   value="1"
                 />
@@ -660,17 +618,6 @@
     </footer>
 
     <script>
-      const rootElement = document.querySelector(":root");
-
-      function enableScroll() {
-        song.volume = 0.1;
-        audioIconWrapper.style.display = "flex";
-        song.play();
-        isPlaying = true;
-      }
-    </script>
-
-    <script>
       const urlParams = new URLSearchParams(window.location.search);
       const to = urlParams.get("to");
       console.log(to);
@@ -749,6 +696,78 @@
           });
         });
       });
+    </script>
+
+    <!-- Script animasi dan audio  -->
+
+    <script>
+      const rootElement = document.querySelector(":root");
+      const video = document.getElementById("myVideo"); // Replace with your video element ID
+      video.volume = 0.1; /* Set initial volume to 50% */ // Function to handle next section action (replace with your desired action)
+      const song = document.querySelector("#song"); // Replace "anotherSong" with the ID of your second song element
+      const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+      const audioIcon = document.querySelector(".audio-icon-wrapper i");
+      const continueButton = document.querySelector(".animasi unlock");
+      let isPlaying = false;
+
+      video.addEventListener("ended", function () {
+        const scrollTarget = document.getElementById("hero"); // Optional: Target section for scrolling (replace with ID)
+        if (scrollTarget) {
+          scrollTarget.scrollIntoView({ behavior: "smooth" });
+        } else {
+          // Scroll to the bottom of the page if no target section provided
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: "smooth",
+          });
+        }
+
+        song.volume = 0.1; // Play another song after autoscroll
+        audioIconWrapper.style.display = "flex";
+        song.play();
+        isPlaying = true;
+      });
+
+      audioIconWrapper.onclick = function () {
+        if (isPlaying) {
+          song.pause();
+          audioIcon.classList.remove("bi-disc");
+          audioIcon.classList.add("bi-pause-circle");
+        } else {
+          song.play();
+          audioIcon.classList.remove("bi-pause-circle");
+          audioIcon.classList.add("bi-disc");
+        }
+
+        isPlaying = !isPlaying;
+      };
+
+      function disableScroll() {
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+        window.onscroll = function () {
+          window.scrollTo(scrollTop, scrollLeft);
+        };
+
+        rootElement.style.scrollBehavior = "auto";
+      }
+
+      function enableScroll() {
+        window.onscroll = function () {};
+        rootElement.style.scrollBehavior = "smooth";
+        // localStorage.setItem('opened', 'true');
+        audioIconWrapper.style.display = "flex";
+        song.play();
+        audioIcon.classList.remove("bi-pause-circle");
+        audioIcon.classList.add("bi-disc");
+        isPlaying = !isPlaying;
+      }
+
+      // if (!localStorage.getItem('opened')) {
+      //   disableScroll();
+      // }
+      disableScroll();
     </script>
   </body>
 </html>
