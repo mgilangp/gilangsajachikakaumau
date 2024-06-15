@@ -43,6 +43,23 @@ video {
   margin-right: auto;
 }
 
+/* Section Navbar ------------------------------------------------ */
+
+.mynavbar {
+  background-color: #f7f7f7;
+}
+.mynavbar .navbar-brand {
+  font-family: "Montserrat", cursive;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--gold);
+}
+
+.mynavbar .navbar-nav .nav-link {
+  text-align: right;
+}
+
 /* Section Hero ------------------------------------------------ */
 
 .hero .col-image {
@@ -476,7 +493,7 @@ footer {
     height: 4rem;
     font-size: 3rem;
     position: fixed;
-    top: 1rem;
+    top: 4rem;
     right: 1rem;
     cursor: pointer;
     color: white;
@@ -494,7 +511,7 @@ footer {
     height: 4rem;
     font-size: 3rem;
     position: fixed;
-    top: 1rem;
+    top: 4rem;
     right: 1rem;
     cursor: pointer;
     color: white;

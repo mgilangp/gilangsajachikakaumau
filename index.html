@@ -46,9 +46,9 @@
     </div>
 
     <!-- Section Animasi -->
-    <section id="animasi" class="animasi bg-white">
-      <div class="container">
-        <div class="row justify-content-evenly">
+    <section id="animasi" class="animasi">
+      <div class="container vh-100">
+        <div class="row justify-content-evenly vh-100">
           <div class="col-12 col-lg-9">
             <video id="myVideo" autoplay muted playsinline controls>
               <source src="img/CG.MP4" type="video/mp4" />
@@ -63,6 +63,49 @@
         </div>
       </div>
     </section>
+
+    <!-- Nav Bar -->
+
+    <nav class="navbar navbar-expand-md sticky-top mynavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#hero">#GilangSajaChikaKauMau</a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end w-75"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="#hero">#GilangSajaChikaKauMau</a>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="#home">Bride and Groom</a>
+              <a class="nav-link" href="#info">The Wedding</a>
+              <a class="nav-link" href="#gallery">CG Gallery</a>
+              <a class="nav-link" href="#rsvp">RSVP</a>
+              <a class="nav-link" href="#gift">Gift</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
 
     <!-- Section Hero -->
     <section id="hero" class="hero p-1 p-md-3 align-items-center bg-white">
@@ -260,7 +303,7 @@
               <div class="row justify-content-center">
                 <div class="col-md-6">
                   <div class="row">
-                    <p class="bi bi-clock d-block">  11:00 WIB</p>
+                    <p class="bi bi-clock d-block">11:00 WIB</p>
                   </div>
                 </div>
               </div>
@@ -278,7 +321,7 @@
             <div class="card-body">
               <div class="row justify-content-center">
                 <div class="col-md-6">
-                  <p class="bi bi-clock d-block">  <span>15</span>:00 WIB</p>
+                  <p class="bi bi-clock d-block"><span>15</span>:00 WIB</p>
                 </div>
               </div>
             </div>
@@ -715,6 +758,10 @@
           });
         }
         enableScroll();
+        song.volume = 0.1; // Play another song after autoscroll
+        audioIconWrapper.style.display = "flex";
+        song.play();
+        isPlaying = true;
       });
 
       audioIconWrapper.onclick = function () {
@@ -727,6 +774,7 @@
           audioIcon.classList.remove("bi-pause-circle");
           audioIcon.classList.add("bi-disc");
         }
+
         isPlaying = !isPlaying;
       };
 
@@ -783,13 +831,11 @@
           preventDefaultForScrollKeys,
           false
         );
+        song.play();
         audioIconWrapper.style.display = "flex";
         audioIcon.classList.remove("bi-pause-circle");
         audioIcon.classList.add("bi-disc");
-        song.play();
-        song.volume = 0.1; // Play another song after autoscroll
         isPlaying = !isPlaying;
-        audioIconWrapper.style.display = "flex";
       }
     </script>
   </body>
